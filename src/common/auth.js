@@ -13,7 +13,7 @@ const hashCompare = async (password, hash) => {
 
 const createToken = async (payload) => {
   const token = await jwt.sign(payload, process.env.JWT_SECRET, {
-    expiresIn: process.env.JWT_EXPIRE,
+    expiresIn: "5h",
   });
   return token;
 };
